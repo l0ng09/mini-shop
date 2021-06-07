@@ -1,0 +1,1 @@
+const cloud=require("wx-server-sdk");cloud.init({env:cloud.DYNAMIC_CURRENT_ENV});const db=cloud.database(),_=db.command;exports.main=async(d,e)=>await db.collection("order").where({_id:_.in(d.ids)}).remove();

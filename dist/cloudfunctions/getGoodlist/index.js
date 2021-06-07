@@ -1,0 +1,1 @@
+const cloud=require("wx-server-sdk");cloud.init({env:cloud.DYNAMIC_CURRENT_ENV});const db=cloud.database(),_=db.command;exports.main=async(d,o)=>(await db.collection("goods").field({title:!0,price:!0,origin:!0,img:!0}).get()).data;

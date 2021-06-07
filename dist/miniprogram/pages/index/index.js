@@ -1,0 +1,1 @@
+(()=>{var t=getApp(),a=null;Page({data:{goods:[],loading:!0},onLoad:function(){a=this,t.getGoodSList({success:function(t){a.setData({goods:t,loading:!1})}})},todetail:function(t){wx.navigateTo({url:"../detail/detail?id=".concat(t.currentTarget.dataset.id,"&name=test")})}})})();

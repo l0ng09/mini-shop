@@ -1,0 +1,1 @@
+const cloud=require("wx-server-sdk");cloud.init({env:cloud.DYNAMIC_CURRENT_ENV});const db=cloud.database(),_=db.command;exports.main=async(e,d)=>await db.collection("order").where({_id:_.in(e.ids)}).update({data:{type:1,deliveryType:e.deliveryType,remark:e.remark,addressData:"fast"==e.deliveryType?e.addressData:null}});
